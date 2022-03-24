@@ -149,6 +149,7 @@ get_header();
         <div class="p-article-header">
             <h2 class="p-article-header__title">売買物件情報</h2>
         </div>
+        <?php $response=wp_remote_get("https://conetas-web.com/fujimoto5-2/api/mansion/index"); ?>
 
         <p class="p-button u-mt--10">
             <a class="p-button__label">売買物件を全て見る</a>
