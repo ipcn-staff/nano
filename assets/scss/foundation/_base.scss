@@ -1,0 +1,45 @@
+html {
+}
+
+body {
+  position: relative;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.pc body.admin-bar {
+  padding-top: 32px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+a::before,
+a::after,
+input {
+  transition-timing-function: ease;
+  transition-timing-function: ease;
+  transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  transition-property: background-color, color;
+  transition-property: background-color, color;
+}
+
+.clear {
+  clear: both;
+}
+
+.hide {
+  display: none;
+}
+
+/* モバイル用キャッチフレーズと説明文を置き換え */
+
+.has_mobile_word span.mobile {
+  display: none;
+}

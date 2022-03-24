@@ -1,0 +1,4 @@
+@use "../config";
+@function get-header-height($size) {
+  @return map-get(config.$header-height, $size);
+}

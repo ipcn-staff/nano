@@ -1,0 +1,11 @@
+.u-flex {
+  display: flex;
+  width: 100%;
+  height: auto;
+
+  &--justify-center {
+    @extend .u-flex;
+
+    justify-content: center;
+  }
+}

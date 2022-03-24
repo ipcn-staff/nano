@@ -1,0 +1,40 @@
+@use "../../mixin";
+.p-article-header {
+  text-align: center;
+
+  &__title {
+    color: #000000;
+    font-size: 46px;
+    margin-bottom: 1rem;
+    @include mixin.mq() {
+      font-size: 29px;
+    }
+
+  }
+
+  &__sub {
+    color: #000000;
+    margin-bottom: 50px;
+    font-size: 16px;
+
+    @include mixin.mq() {
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+  }
+
+  &__desc {
+    color: #000000;
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 42px;
+
+    @include mixin.mq() {
+      font-size: 14px;
+      margin-bottom: 33px;
+    }
+
+  }
+
+}

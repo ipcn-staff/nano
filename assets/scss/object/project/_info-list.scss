@@ -1,0 +1,33 @@
+.p-info-list {
+
+  &__item {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    height: 60px;
+    line-height: 60px;
+  }
+
+  &__label-time {
+    font-size: 14px;
+    margin-right: 14px;
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: 400;
+    flex: 1;
+    margin-bottom: 0 !important;
+    transition: color 0.2s ease;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-left: 1rem;
+  }
+
+}

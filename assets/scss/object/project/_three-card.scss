@@ -1,0 +1,135 @@
+@use "../../mixin";
+.p-three-card {
+  display: flex;
+  padding: 0 65px;
+  margin-bottom: 50px;
+  @include mixin.mq() {
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  &__item {
+    margin-left: -1px;
+    width: 33.33%;
+    height: 533px;
+    background: #fff;
+    overflow: hidden;
+
+    @include mixin.mq(lg) {
+      &:hover {
+        .p-three-card-content {
+
+          &__header-title {
+            color: white;
+          }
+
+          &__header-sub {
+            color: white;
+          }
+
+          &__desc {
+            opacity: 1;
+          }
+
+          &__overlay {
+            opacity: 1;
+            transform: translateY(-140px);
+          }
+
+          &__img {
+            transform: translateY(-140px);
+          }
+
+        }
+
+      }
+    }
+
+    @include mixin.mq() {
+      width: 100%;
+      height: 403px;
+    }
+
+  }
+
+}
+
+.p-three-card-content {
+  display: block;
+  position: relative;
+  height: 100%;
+
+  &__header {
+    border: 1px solid #ddd;
+    border-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 140px;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+
+    @include mixin.mq() {
+      height: 83px;
+    }
+  }
+
+  &__header-title {
+    color: #000000;
+    font-size: 32px;
+    transition: color 0.2s ease;
+    margin-bottom: 10px;
+
+    @include mixin.mq() {
+      font-size: 26px;
+    }
+  }
+
+  &__header-sub {
+    transition: color 0.2s ease;
+  }
+
+  &__desc {
+    color: #fff;
+    line-height: 1.8;
+    padding: 0 12.71186%;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 3;
+  }
+
+  &__overlay {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 140px;
+    z-index: 2;
+    transition: opacity 0.2s ease, transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    @include mixin.mq() {
+      top: 83px;
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 140px;
+    position: absolute;
+    z-index: 1;
+    transition: opacity 0.2s ease, transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    @include mixin.mq() {
+      top: 83px;
+    }
+  }
+}

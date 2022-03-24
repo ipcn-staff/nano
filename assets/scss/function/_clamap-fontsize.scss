@@ -1,0 +1,8 @@
+@function clamap-fontsize($minFont){
+  $minWidth:480;
+  $maxWidth:1020;
+  $minFontSize:$minFont*1px;
+  $fontVw:round($minFont/$minWidth*100*1000)/1000;
+  $maxFontSize:round($maxWidth*($fontVw /100))*1px;
+  @return clamp(#{$minFontSize},#{$fontVw}vw,#{$maxFontSize});
+}

@@ -1,0 +1,39 @@
+@for $i from 0 through 30 {
+  .u-mt--#{$i} {
+    margin-top: 4px * $i;
+  }
+  .u-mb--#{$i} {
+    margin-bottom: 4px * $i;
+  }
+  .u-ml--#{$i} {
+    margin-left: 4px * $i;
+  }
+  .u-mr--#{$i} {
+    margin-right: 4px * $i;
+  }
+  .u-mx--#{$i} {
+    margin: 0 4px * $i;
+  }
+  .u-my--#{$i} {
+    margin: 4px * $i 0;
+  }
+
+  .u-pt--#{$i} {
+    padding-top: 4px * $i;
+  }
+  .u-pb--#{$i} {
+    padding-bottom: 4px * $i;
+  }
+  .u-pl--#{$i} {
+    padding-left: 4px * $i;
+  }
+  .u-pr--#{$i} {
+    padding-right: 4px * $i;
+  }
+  .u-px--#{$i} {
+    padding: 0 4px * $i;
+  }
+  .u-py--#{$i} {
+    padding: 4px * $i 0;
+  }
+}

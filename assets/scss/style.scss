@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/*
+Theme Name: NANO
+Theme URI:https://tcd-theme.com/tcd065
+Description:"NANO" is a WordPress theme that allows you to create a large corporate website at a low cost. The multi-level site structure organized and transmits a wide range of business info. Also you can easy to design the top page that conveys your company's message and achievements.
+Author:TCD
+Author URI:https://tcd-theme.com/
+Text Domain: tcd-nano
+Version:1.6.2
+*/
+@use "foundation/**/*";
+@use "config";
+@use "function";
+@use "mixin";
+@use "layout/**/*";
+@use "object/**/*";

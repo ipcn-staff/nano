@@ -1,0 +1,17 @@
+@use "../mixin";
+.l-inner {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 92.1875%;
+  max-width: 1180px;
+
+  @include mixin.mq(md) {
+    width: 88.88889%;
+  }
+
+  @include mixin.mq() {
+    padding: 0 20px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,23 @@
+@use "../../mixin";
+.c-menu-button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  line-height: 60px;
+  width: 60px;
+  height: 60px;
+  color: #000000;
+  display: none;
+  position: relative;
+  right: -20px;
+
+  &:before {
+    content: "\F0C9";
+    font-family: "design_plus";
+    font-size: 18px;
+  }
+
+  @include mixin.mq() {
+    display: block;
+  }
+}

@@ -1,0 +1,38 @@
+@use "../../mixin";
+.p-page-header {
+  background: #fff;
+  box-shadow: 0 -8px 10px rgb(0 0 0 / 20%);
+  padding: 92px 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+
+  @include mixin.mq(md) {
+    box-shadow: none;
+  }
+
+  @include mixin.mq() {
+    padding: 36px 20px 33px;
+  }
+
+  &__title {
+    color: #000000;
+    font-size: 40px;
+
+    @include mixin.mq() {
+      font-size: 26px;
+    }
+
+  }
+
+  &__desc {
+    color: #000000;
+    font-size: 16px;
+
+    @include mixin.mq() {
+      font-size: 14px;
+    }
+
+  }
+
+}

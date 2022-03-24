@@ -1,0 +1,54 @@
+@use "../config";
+@use "../mixin";
+.l-global-nav {
+  display: flex;
+  font-size: 14px;
+  text-align: center;
+  line-height: 60px;
+
+  @include mixin.mq(md) {
+    max-height: calc(100vh - 60px);
+    overflow: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: auto;
+    margin: 30px auto 18px;
+    width: 92.1875%;
+  }
+
+  &__item {
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    flex: 1;
+    margin-left: -1px;
+    list-style-type: none;
+
+    @include mixin.mq(md) {
+      border: 0;
+      flex: 0 1 auto;
+      margin: 0 0 12px 0;
+      width: calc((50% - 6px));
+    }
+
+  }
+
+  &__label {
+    display: block;
+    padding: 0 21px;
+
+    &--current {
+      @extend .l-global-nav__label;
+      background: config.$primary-color !important;
+      color: white;
+    }
+
+    &:hover {
+      @extend .l-global-nav__label--current;
+    }
+
+    @include mixin.mq(md) {
+      background: #ffffff;
+    }
+
+  }
+}

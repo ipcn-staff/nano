@@ -1,0 +1,23 @@
+@use "../../mixin";
+.u-d-none {
+  display: none;
+
+  &--lg {
+    display: none;
+    @include mixin.mq() {
+      display: block;
+    }
+  }
+
+  &--sm {
+    display: block;
+    @include mixin.mq() {
+      display: none;
+    }
+  }
+
+}
+
+.u-d-inline-block {
+  display: inline-block;
+}

@@ -1,0 +1,50 @@
+table.pb_simple_table_3column { border-collapse: collapse; border-spacing: 0; width: 100%; }
+table.pb_simple_table_3column th, table.pb_simple_table_3column td { border: 1px solid #ddd; line-height: 2.2; vertical-align: middle; }
+table.pb_simple_table_3column th { padding: 16px; text-align: center; }
+table.pb_simple_table_3column td { padding: 16px 25px 16px 28px; }
+table.pb_simple_table_3column td p { margin-top: 0 !important; padding: 0 !important; }
+table.pb_simple_table_3column td > :last-child { margin-bottom: 0 !important; }
+table.pb_simple_table_3column th.pb_simple_table_3column-group { width: 16.5%; }
+table.pb_simple_table_3column th.pb_simple_table_3column-headline { width: 20%; }
+table.pb_simple_table_3column-has_group th.pb_simple_table_3column-headline { width: 8%; }
+
+.pb_simple_table_3column-googlemap_header { margin-bottom: 16px; }
+.pb_simple_table_3column .pb_googlemap_embed { margin-bottom: 0; }
+.pb_simple_table_3column-googlemap_footer { display: block; margin-top: 16px; text-align: right; }
+.pb_simple_table_3column-googlemap_footer .pb_googlemap_footer_button { display: inline-block; line-height: 55px; height: 55px; }
+.pb_simple_table_3column-googlemap_footer .pb_googlemap_footer_button::before { vertical-align: bottom; }
+
+@media only screen and (max-width: 767px) {
+  table.pb_simple_table_3column th, table.pb_simple_table_3column td { line-height: 1.8; }
+  table.pb_simple_table_3column th { padding: 8px; }
+  table.pb_simple_table_3column td { padding: 8px 14px; }
+  table.pb_simple_table_3column th.pb_simple_table_3column-group { width: 24.3%; }
+  table.pb_simple_table_3column th.pb_simple_table_3column-headline { width: 25%; }
+  table.pb_simple_table_3column-has_group th.pb_simple_table_3column-headline { width: 16.3%; }
+
+  .pb_simple_table_3column-googlemap_header { margin-bottom: 12px; }
+  .pb_simple_table_3column-googlemap_footer { display: block; margin-top: 16px; text-align: right; }
+  .pb_simple_table_3column-googlemap_footer .pb_googlemap_footer_button { display: block; line-height: 45px; height: 45px; }
+}
+
+@media only screen and (max-width: 320px) {
+  table.pb_simple_table_3column th.pb_simple_table_3column-group { width: 20%; }
+  table.pb_simple_table_3column th.pb_simple_table_3column-headline { width: 20%; }
+  table.pb_simple_table_3column-has_group th.pb_simple_table_3column-headline { width: 10%; }
+}
+
+ul.pb_simple_table_icons { list-style: none !important; padding: 0 !important; margin: 0 !important; }
+ul.pb_simple_table_icons li { display: inline-block !important; padding: 0 !important; margin: 0 10px 0 0 !important; }
+.pb_simple_table_icons a, .post_content .pb_simple_table_icons a { color: #000; text-decoration: none !important; -webkit-transition-property: none; }
+.pb_simple_table_icons a span { display: none; }
+.pb_simple_table_icons a:before { font-family: "design_plus"; }
+.pb_simple_table_icon-website a:before { content: "\f0ac"; }
+.pb_simple_table_icon-facebook a:before { content: "\e902"; }
+.pb_simple_table_icon-twitter a:before { content: "\e904"; }
+.pb_simple_table_icon-instagram a:before { content: "\ea92"; }
+.pb_simple_table_icon-pinterest a:before { content: "\e905"; }
+.pb_simple_table_icon-flickr a:before { content: "\eaa4"; }
+.pb_simple_table_icon-tumblr a:before { content: "\eab9"; }
+.pb_simple_table_icon-youtube a:before { content: "\ea9e"; }
+.pb_simple_table_icon-contact a:before { content: "\f003"; }
+.pb_simple_table_icon-rss a:before { content: "\e90b"; }
