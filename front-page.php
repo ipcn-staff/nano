@@ -149,23 +149,57 @@ get_header();
         <div class="p-article-header">
             <h2 class="p-article-header__title">売買物件情報</h2>
         </div>
+        <div class="p-property-list u-mt--5">
         <?php
-        $response=wp_remote_get("https://conetas-web.com/fujimoto5-2/api/mansion/index");
-        print_r($response)
+        $res = wp_remote_get("http://127.0.0.1:8000/index/buyPickUp");
+        $array = json_decode($res["body"]);
+        foreach ($array as $val) {
+            $img_path = "https://conetas-web.com/fujimoto5/web/images/mansion/t/".sprintf("%08d",$val->seq)."-01.jpg";
+            echo "<article class='p-property-list__item'>";
+            echo "<a class='p-hover-effect--type1'>";
+            echo "<img class='p-property-list__img' src='$img_path' alt=''>";
+            echo "</a>";
+            echo "<div class='p-property-list__content'>";
+            echo "<h3 class='p-property-list__title'>$val->mansion_name</h3>";
+            echo "<p class='p-property-list__excerpt'>$val->remarks</p>";
+            echo "</div>";
+            echo "</article>";
+        }
         ?>
+        </div>
 
         <p class="p-button u-mt--10">
             <a class="p-button__label">売買物件を全て見る</a>
         </p>
     </section>
 
-    <div class="p-article-header">
-        <h2 class="p-article-header__title">賃貸物件情報</h2>
-    </div>
+    <section class="u-mt--20">
+        <div class="p-article-header">
+            <h2 class="p-article-header__title">賃貸物件情報</h2>
+        </div>
 
-    <p class="p-button u-mt--10">
-        <a class="p-button__label">賃貸物件情報を全て見る</a>
-    </p>
+        <div class="p-property-list u-mt--5">
+            <?php
+            $res = wp_remote_get("http://127.0.0.1:8000/index/leasePickUp");
+            $array = json_decode($res["body"]);
+            foreach ($array as $val) {
+                $img_path = "https://conetas-web.com/fujimoto5/web/images/$val->kbn/t/".sprintf("%08d",$val->seq)."-01.jpg";
+                echo "<article class='p-property-list__item'>";
+                echo "<a class='p-hover-effect--type1'>";
+                echo "<img class='p-property-list__img' src='$img_path' alt=''>";
+                echo "</a>";
+                echo "<div class='p-property-list__content'>";
+                echo "<p class='p-property-list__excerpt'>$val->remarks</p>";
+                echo "</div>";
+                echo "</article>";
+            }
+            ?>
+        </div>
+
+        <p class="p-button u-mt--10">
+            <a class="p-button__label">賃貸物件情報を全て見る</a>
+        </p>
+    </section>
 </article>
 
 <?php
