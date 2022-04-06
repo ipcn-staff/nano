@@ -151,14 +151,15 @@ get_header();
         </div>
         <div class="p-property-list u-mt--5">
         <?php
-        $res = wp_remote_get("https://conetas-web.com/fujimoto5-2/api/public/index/buyPickUp");
-        //$res = wp_remote_get(" http://127.0.0.1:8000/index/buyPickUp");
+        // $res = wp_remote_get("https://conetas-web.com/fujimoto5-2/api/public/index/buyPickUp");
+        $res = wp_remote_get(" http://127.0.0.1:8000/index/buyPickUp");
         $array = json_decode($res["body"]);
         foreach ($array as $val) {
             $img_path = "https://conetas-web.com/fujimoto5/web/images/mansion/t/".sprintf("%08d",$val->seq)."-01.jpg";
+            $path = getHomeUrl("/property-details/?kbn=sell&type=mansion&id=$val->id");
             $layout = $val->layout_num.getRoomLayout($val->room_layout);
             echo "<article class='p-property-list__item'>";
-            echo "<a class='p-hover-effect--type1'>";
+            echo "<a class='p-hover-effect--type1' href='$path'>";
             echo "<img class='p-property-list__img' src='$img_path' alt=''>";
             echo "</a>";
             echo "<div class='p-property-list__content'>";
@@ -186,8 +187,8 @@ get_header();
 
         <div class="p-property-list u-mt--5">
             <?php
-            $res = wp_remote_get("https://conetas-web.com/fujimoto5-2/api/public/index/leasePickUp");
-            //$res = wp_remote_get(" http://127.0.0.1:8000/index/leasePickUp");
+            //$res = wp_remote_get("https://conetas-web.com/fujimoto5-2/api/public/index/leasePickUp");
+            $res = wp_remote_get(" http://127.0.0.1:8000/index/leasePickUp");
             $array = json_decode($res["body"]);
             foreach ($array as $val) {
                 $img_path = "https://conetas-web.com/fujimoto5/web/images/$val->kbn/t/".sprintf("%08d",$val->seq)."-01.jpg";

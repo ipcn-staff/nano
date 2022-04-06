@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="<?php seo_description(); ?>">
     <?php wp_head(); ?>
+    <link rel="stylesheet" href="<?php echoAssetsPath('css/slick.min.css'); ?>">
+    <link rel="stylesheet" href="<?php echoAssetsPath('css/slick-theme.min.css'); ?>">
 </head>
 <body <?php body_class(); ?>>
 <header class="l-header">

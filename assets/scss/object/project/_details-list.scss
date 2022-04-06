@@ -1,0 +1,35 @@
+.p-details-list {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  border: 1px solid #ddd;
+
+  &__item {
+    width: 100%;
+    display: flex;
+    &:not(:last-child) {
+      border-bottom: 1px solid #ddd;
+    }
+
+    &--narrow {
+      @extend .p-details-list__item;
+      width: 50%;
+    }
+
+  }
+
+  &__term {
+    padding: 16px;
+    width: 20%;
+    text-align: center;
+    background: #fafafa;
+    border-right: 1px solid #ddd;
+  }
+
+  &__description {
+    padding: 16px;
+    width: 80%;
+    margin: 0;
+  }
+
+}

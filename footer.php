@@ -5,5 +5,6 @@
   </footer>
   <script src="<?php echoAssetsPath('js/src/global-nav.js'); ?>"></script>
   <script src="<?php echoAssetsPath('js/src/tab.js'); ?>"></script>
+  <script src="<?php echoAssetsPath('js/src/slick.min.js'); ?>"></script>
 </body>
 </html>

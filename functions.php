@@ -1041,6 +1041,14 @@ function ajax_get_gellery_items() {
 add_action( 'wp_ajax_get_gellery_items', 'ajax_get_gellery_items' );
 add_action( 'wp_ajax_nopriv_get_gellery_items', 'ajax_get_gellery_items' );
 
+function getHomeUrl($path) {
+    return home_url().'/'.$path;
+}
+
+function echoHomeUrl($path) {
+    echo getHomeUrl($path);
+}
+
 function getThemePath($path) {
     return get_theme_file_uri().'/'.$path;
 }
@@ -1088,4 +1096,127 @@ function getRoomLayout($num) {
             break;
     }
     return $layout;
+}
+
+function getArchitecture($num) {
+    $data = "";
+    switch ((int)$num) {
+        case 1:
+            $data = "RC";
+            break;
+        case 2:
+            $data = "SRC";
+            break;
+        case 3:
+            $data = "鉄骨";
+            break;
+        case 4:
+            $data = "木造";
+            break;
+    }
+    return $data;
+}
+
+function getEra($num) {
+    $data = "";
+    switch ($num) {
+        case 1:
+            $data = "昭和";
+            break;
+        case 2:
+            $data = "平成";
+            break;
+        case 3:
+            $data = "令和";
+            break;
+    }
+    return $data;
+}
+
+function getAspect($num) {
+    $data = "";
+    switch ($num) {
+        case 1:
+            $data = "媒介";
+            break;
+    }
+    return $data;
+}
+
+function getDelivery($num) {
+    $data = "";
+    switch ($num) {
+        case 1:
+            $data = "昭和";
+            break;
+        case 2:
+            $data = "平成";
+            break;
+        case 3:
+            $data = "即";
+            break;
+        case 4:
+            $data = "相談";
+            break;
+        case 5:
+            $data = "令和";
+            break;
+    }
+    return $data;
+}
+
+function getActualCondition($num) {
+    $data = "";
+    switch ($num) {
+        case 1:
+            $data = "空き";
+            break;
+        case 2:
+            $data = "入居中";
+            break;
+        case 3:
+            $data = "賃貸中";
+            break;
+        case 4:
+            $data = "リフォーム中";
+            break;
+        case 5:
+            $data = "更地";
+            break;
+        case 6:
+            $data = "建築中";
+            break;
+        case 7:
+            $data = "上屋あり";
+            break;
+    }
+    return $data;
+}
+
+function getSystemImgPath($type,$seq,$img_num,$is_thumbnail = true) {
+    if($is_thumbnail) {
+        $img_size = 't';
+    } else {
+        $img_size = 'd';
+    }
+    return "https://conetas-web.com/fujimoto5/web/images/$type/$img_size/".sprintf("%08d",$seq)."-".$img_num.".jpg";
+}
+
+function apiGet($path) {
+    // $res = wp_remote_get("https://conetas-web.com/fujimoto5-2/api/public/$path");
+    $res = wp_remote_get("http://127.0.0.1:8000/$path");
+    return json_decode($res["body"]);
+}
+
+function apiPost($path, $array) {
+    // $res = wp_remote_get("https://conetas-web.com/fujimoto5-2/api/public/$path");
+    $res = wp_remote_post("http://127.0.0.1:8000/$path", array(
+        'method' => 'POST',
+        'headers' => array(
+            'content-Type' => 'application/json; charset=utf-8'
+        ),
+        'httpversion' => '1.0',
+        'sslverify' => false,
+        'body' => json_encode($array)));
+    return json_decode($res["body"]);
 }
