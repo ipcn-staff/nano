@@ -1203,14 +1203,23 @@ function getSystemImgPath($type,$seq,$img_num,$is_thumbnail = true) {
 }
 
 function apiGet($path) {
-    // $res = wp_remote_get("https://conetas-web.com/fujimoto5-2/api/public/$path");
-    $res = wp_remote_get("http://127.0.0.1:8000/$path");
+    if($_SERVER['HTTP_HOST']==='demo.lo') {
+        $root = "http://127.0.0.1:8000/";
+    } else {
+        $root = "https://conetas-web.com/fujimoto5-2/api/public/";
+    }
+    $res = wp_remote_get($root.$path);
     return json_decode($res["body"]);
 }
 
 function apiPost($path, $array) {
-    // $res = wp_remote_get("https://conetas-web.com/fujimoto5-2/api/public/$path");
-    $res = wp_remote_post("http://127.0.0.1:8000/$path", array(
+    if($_SERVER['HTTP_HOST']==='demo.lo') {
+        $root = "http://127.0.0.1:8000/";
+    } else {
+        $root = "https://conetas-web.com/fujimoto5-2/api/public/";
+    }
+
+    $res = wp_remote_post($root.$path, array(
         'method' => 'POST',
         'headers' => array(
             'content-Type' => 'application/json; charset=utf-8'
