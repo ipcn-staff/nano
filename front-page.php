@@ -151,17 +151,23 @@ get_header();
         </div>
         <div class="p-property-list u-mt--5">
         <?php
-        $res = wp_remote_get("https://conetas-web.com/fujimoto5-2/api/public/index/buyPickUp");
+        //$res = wp_remote_get("https://conetas-web.com/fujimoto5-2/api/public/index/buyPickUp");
+        $res = wp_remote_get(" http://127.0.0.1:8000/index/buyPickUp");
         $array = json_decode($res["body"]);
         foreach ($array as $val) {
             $img_path = "https://conetas-web.com/fujimoto5/web/images/mansion/t/".sprintf("%08d",$val->seq)."-01.jpg";
+            $layout = $val->layout_num.getRoomLayout($val->room_layout);
             echo "<article class='p-property-list__item'>";
             echo "<a class='p-hover-effect--type1'>";
             echo "<img class='p-property-list__img' src='$img_path' alt=''>";
             echo "</a>";
             echo "<div class='p-property-list__content'>";
             echo "<h3 class='p-property-list__title'>$val->mansion_name</h3>";
-            echo "<p class='p-property-list__excerpt'>$val->remarks</p>";
+            echo "<p class='p-property-list__excerpt'>価格:$val->price 万円<br>";
+            echo "間取り:$layout<br>";
+            echo "交通:$val->railroad_name<br>";
+            echo "駅:$val->station_name";
+            echo "</p>";
             echo "</div>";
             echo "</article>";
         }
@@ -180,7 +186,8 @@ get_header();
 
         <div class="p-property-list u-mt--5">
             <?php
-            $res = wp_remote_get("https://conetas-web.com/fujimoto5-2/api/public/index/leasePickUp");
+            //$res = wp_remote_get("https://conetas-web.com/fujimoto5-2/api/public/index/leasePickUp");
+            $res = wp_remote_get(" http://127.0.0.1:8000/index/leasePickUp");
             $array = json_decode($res["body"]);
             foreach ($array as $val) {
                 $img_path = "https://conetas-web.com/fujimoto5/web/images/$val->kbn/t/".sprintf("%08d",$val->seq)."-01.jpg";
@@ -189,7 +196,19 @@ get_header();
                 echo "<img class='p-property-list__img' src='$img_path' alt=''>";
                 echo "</a>";
                 echo "<div class='p-property-list__content'>";
-                echo "<p class='p-property-list__excerpt'>$val->remarks</p>";
+                echo "<p class='p-property-list__excerpt'>価格:$val->hire 円<br>";
+                if ($val->kbn === "housing") {
+                    $layout = $val->layout_num.getRoomLayout($val->room_layout);
+                    echo "間取り:$layout<br>";
+                    echo "交通:$val->railroad_name<br>";
+                    echo "駅:$val->station_name";
+                } elseif ($val->kbn === "business") {
+                    $tsubo = round($val->extent * 0.3025,2);
+                    echo "広さ(m2/坪):$val->extent"."㎡/$tsubo<br>";
+                    echo "交通:$val->railroad_name<br>";
+                    echo "駅:$val->station_name";
+                }
+                echo "</p>";
                 echo "</div>";
                 echo "</article>";
             }

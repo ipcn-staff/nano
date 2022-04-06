@@ -1064,3 +1064,28 @@ function getImgPath($path) {
 function echoImgPath($path) {
     echo getImgPath($path);
 }
+
+function getRoomLayout($num) {
+    $layout = "";
+    switch ($num) {
+        case 1:
+            $layout = "K";
+            break;
+        case 2:
+            $layout = "DK";
+            break;
+        case 3:
+            $layout = "LDK";
+            break;
+        case 4:
+            $layout = "SDK";
+            break;
+        case 5:
+            $layout = "SLDK";
+            break;
+        case 6:
+            $layout = "ワンルーム";
+            break;
+    }
+    return $layout;
+}
