@@ -82,6 +82,7 @@
     font-size: 32px;
     transition: color 0.2s ease;
     margin-bottom: 10px;
+    @include mixin.mincho;
 
     @include mixin.mq() {
       font-size: 26px;
