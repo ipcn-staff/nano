@@ -6,6 +6,7 @@
   text-align: center;
   position: relative;
   z-index: 1;
+  margin-top: -100px;
 
   @include mixin.mq(md) {
     box-shadow: none;

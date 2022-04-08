@@ -18,6 +18,8 @@ get_header();
             <ul class="p-tab__tabs">
                 <li data-content="tab1" class="p-tab__tabs-item"><a class="p-tab__tabs-label p-tab__tabs-label--is-active">最新情報</a></li>
                 <li data-content="tab2" class="p-tab__tabs-item"><a class="p-tab__tabs-label">お知らせ</a></li>
+                <li data-content="tab2" class="p-tab__tabs-item"><a class="p-tab__tabs-label">仮</a></li>
+                <li data-content="tab2" class="p-tab__tabs-item"><a class="p-tab__tabs-label">仮</a></li>
             </ul>
         </div>
         <section id="tab1" class="p-tab__content">
