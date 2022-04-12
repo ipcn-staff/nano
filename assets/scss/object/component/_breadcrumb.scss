@@ -1,0 +1,31 @@
+.c-breadcrumb {
+  height: 98px;
+  line-height: 98px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 0;
+  display: flex;
+
+  &__item {
+
+    &--home {
+      a {
+        &:before {
+          content: "\E90C";
+          font-family: "design_plus";
+          vertical-align: middle;
+          position: relative;
+          top: -1px;
+        }
+      }
+    }
+
+    &:not(.c-breadcrumb__item--home):before {
+      content: "\E910";
+      font-family: "design_plus";
+      margin-left: 12px;
+      margin-right: 12px;
+    }
+  }
+}

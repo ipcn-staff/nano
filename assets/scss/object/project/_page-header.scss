@@ -10,6 +10,7 @@
 
   @include mixin.mq(md) {
     box-shadow: none;
+    margin-top: 0;
   }
 
   @include mixin.mq() {

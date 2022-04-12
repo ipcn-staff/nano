@@ -1,0 +1,43 @@
+@use "../config";
+@use "../mixin";
+.l-footer-fixed-banner {
+  background-color: config.$primary-color;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  z-index: 998;
+
+  &__inner {
+    height: 100%;
+    padding: 0 60px 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    a {
+      display: block;
+      height: 100%;
+      color: white;
+      background: rgba(0,67,83,.8) !important;
+      text-align: center;
+      min-width: 270px;
+      padding: 0 10px;
+      line-height: 60px;
+      margin-left: 30px;
+    }
+  }
+
+  &__close-button {
+    background-color: config.$primary-color;
+    border: 0;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+  }
+}

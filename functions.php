@@ -95,36 +95,6 @@ function nano_init() {
     'hierarchical' => true
   ) );
 
-  // Register custom post type "Company"
-  $company_label = $dp_options['company_breadcrumb'] ? esc_html( $dp_options['company_breadcrumb'] ) : __( 'News', 'tcd-w' );
-  $company_slug = $dp_options['company_slug'] ? esc_html( $dp_options['company_slug'] ) : 'company';
-	$company_labels = array(
-    'name' => $company_label,
-    'add_new' => __( 'Add New', 'tcd-w' ),
-    'add_new_item' => __( 'Add New Item', 'tcd-w' ),
-    'edit_item' => __( 'Edit', 'tcd-w' ),
-    'new_item' => __( 'New item', 'tcd-w' ),
-    'view_item' => __( 'View Item', 'tcd-w' ),
-    'search_items' => __( 'Search Items', 'tcd-w' ),
-    'not_found' => __( 'Not Found', 'tcd-w' ),
-    'not_found_in_trash' => __( 'Not found in trash', 'tcd-w' ),
-    'parent_item_colon' => ''
-	);
-	register_post_type( 'company', array(
-    'label' => $company_label,
-    'labels' => $company_labels,
-    'public' => true,
-    'publicly_queryable' => true,
-    'menu_position' => 5,
-    'show_ui' => true,
-    'query_var' => true,
-    'rewrite' => array( 'slug' => $company_slug ),
-    'capability_type' => 'post',
-    'has_archive' => true,
-    'hierarchical' => false,
-    'supports' => array( 'title', 'editor', 'thumbnail' )
-  ) );
-
   // Register custom post type "Service"
   $service_label = $dp_options['service_breadcrumb'] ? esc_html( $dp_options['service_breadcrumb'] ) : __( 'Service', 'tcd-w' );
   $service_slug = $dp_options['service_slug'] ? esc_html( $dp_options['service_slug'] ) : 'service';
@@ -1199,7 +1169,7 @@ function getSystemImgPath($type,$seq,$img_num,$is_thumbnail = true) {
     } else {
         $img_size = 'd';
     }
-    return "https://conetas-web.com/fujimoto5/web/images/$type/$img_size/".sprintf("%08d",$seq)."-".$img_num.".jpg";
+    return "https://conetas-web.com/fujimoto5/web/images/$type/$img_size/".sprintf("%08d",$seq)."-".sprintf("%02d",$img_num).".jpg";
 }
 
 function apiGet($path) {

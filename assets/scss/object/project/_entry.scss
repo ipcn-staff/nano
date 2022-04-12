@@ -1,0 +1,47 @@
+.p-entry {
+  width: 100%;
+  &__header {
+    font-size: 30px;
+    line-height: 1.4;
+    margin-bottom: 44px;
+    padding-top: 44px;
+    text-align: center;
+  }
+
+  &__title {
+    border-top: 1px solid #ddd;
+    margin-bottom: 40px;
+
+    &--no-border {
+      @extend .p-entry__title;
+      border-top: none;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+    height: 400px;
+  }
+
+  &__body {
+
+  }
+
+  &__body-row {
+    padding: 45px 0;
+    border-top: 1px solid #ddd;
+    p {
+      line-height: 2.2;
+    }
+  }
+
+  &__body-title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+}

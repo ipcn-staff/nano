@@ -1,0 +1,16 @@
+@use "../../config";
+@use "../../mixin";
+.p-headline {
+  border-top: 3px solid config.$primary-color;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.7;
+  margin-bottom: 0;
+  padding: 38px 0 41px;
+  text-align: center;
+
+  &--no-border {
+    @extend .p-headline;
+    border-top: none;
+  }
+}

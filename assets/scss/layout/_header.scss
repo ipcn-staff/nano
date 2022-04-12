@@ -2,6 +2,10 @@
 .l-header {
   background: #ffffff;
   width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
 
   &__inner {
     display: flex;
@@ -16,10 +20,17 @@
   &__logo {
     height: 100%;
     padding: 10px 0;
+    display: flex;
+    align-items: center;
   }
 
   &__logo-img {
-    height: 100%;
+    height: auto;
+    width: 250px;
+    @include mixin.mq(md) {
+      height: 100%;
+      width: auto;
+    }
   }
 
   &__nav {

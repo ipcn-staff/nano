@@ -1,0 +1,30 @@
+@use "../../mixin";
+.c-tel-bnr {
+  display: flex;
+  flex-direction: column;
+  @include mixin.mq() {
+    display: none;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__icon {
+    color: #69582c;
+  }
+
+  &__number {
+    margin-left: 6px;
+    @include mixin.mincho;
+    color: #69582c;
+    font-size: 36px;
+    font-weight: normal;
+  }
+
+  &__text {
+
+  }
+}

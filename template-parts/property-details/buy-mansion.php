@@ -95,4 +95,8 @@
             <dd class="p-details-list__description"><?php echo $args->remarks; ?></dd>
         </div>
     </dl>
+
+    <div class="c-button u-mt--15">
+        <a href="" class="c-button__label">売買物件一覧に戻る</a>
+    </div>
 </section>

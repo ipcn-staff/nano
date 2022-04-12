@@ -1,0 +1,27 @@
+@use "../../mixin";
+
+.p-block-list {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+
+  &__item {
+    width: calc(33.33% - 10px);
+    margin: 10px 5px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+
+    @include mixin.mq() {
+      width: calc(50% - 10px);
+      padding: 30px 10px;
+    }
+
+  }
+
+  &__label {
+    text-align: center;
+  }
+}

@@ -2,15 +2,18 @@
   border-top: 1px solid #ddd;
   margin-bottom: 150px;
   padding-top: 50px;
-
-  &--no-border {
-    @extend .l-contents;
-    border-top: 0;
-    padding-top: 0;
+  &__inner {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
   }
 
-  &__inner {
-    background: #fff;
-    margin-top: -100px;
+  &__left {
+    width: 300px;
+  }
+
+  &__right {
+    width: 100%;
+    margin-left: 50px;
   }
 }
