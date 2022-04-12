@@ -110,5 +110,17 @@
   <script src="<?php echoAssetsPath('js/src/global-nav.js'); ?>"></script>
   <script src="<?php echoAssetsPath('js/src/tab.js'); ?>"></script>
   <script src="<?php echoAssetsPath('js/src/slick.min.js'); ?>"></script>
+  <script>
+      const $ = jQuery
+      $('#js-property-details-slider').slick({
+        autoplay: true,
+        slidesToShow: 3,
+        dots: false,
+        centerMode: true,
+        centerPadding: '5%',
+        prevArrow:'<div class="prev"><</div>',
+        nextArrow:'<div class="next">></div>',
+      })
+  </script>
 </body>
 </html>
