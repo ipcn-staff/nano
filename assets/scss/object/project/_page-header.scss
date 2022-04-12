@@ -31,6 +31,7 @@
   &__desc {
     color: #000000;
     font-size: 16px;
+    @include mixin.mincho;
 
     @include mixin.mq() {
       font-size: 14px;

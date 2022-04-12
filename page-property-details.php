@@ -42,7 +42,6 @@ $data = apiPost('mansion/show', ['id' => $id]);
         </div>
         <div class="l-contents__right">
             <?php get_template_part('template-parts/property-details/buy-mansion', null, $data) ?>
-
         </div>
     </div>
 </main>
