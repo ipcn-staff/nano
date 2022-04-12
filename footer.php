@@ -107,11 +107,11 @@
           <button class="l-footer-fixed-banner__close-button">×</button>
       </div>
   </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="<?php echoAssetsPath('js/src/global-nav.js'); ?>"></script>
   <script src="<?php echoAssetsPath('js/src/tab.js'); ?>"></script>
   <script src="<?php echoAssetsPath('js/src/slick.min.js'); ?>"></script>
   <script>
-      const $ = jQuery
       $('#js-property-details-slider').slick({
         autoplay: true,
         slidesToShow: 3,
