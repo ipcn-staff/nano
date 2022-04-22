@@ -160,7 +160,7 @@ get_header();
          </li>
      </ul>
 
-    <p class="c-button u-mt--10">
+    <p class="c-button u-mt--10 u-mb--20">
         <a class="c-button__label">会社案内</a>
     </p>
 </article>
