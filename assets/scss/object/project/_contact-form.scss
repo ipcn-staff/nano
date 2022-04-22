@@ -1,0 +1,366 @@
+/*	汎用テーブル
+---------------------------------*/
+.contact-wrapper {
+  width: 50%;
+  margin: auto;
+}
+.tbl-cmn01 {
+}
+.tbl-cmn01 table {
+  width: 100%;
+  border-top: 1px solid #ccc;
+}
+.tbl-cmn01 th {
+  padding: 1.1rem 2rem;
+  width: 38%;
+  font-weight: 700;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid #ccc;
+}
+.tbl-cmn01 td {
+  padding: 1.1rem 2rem;
+  border-bottom: 1px solid #ccc;
+}
+.tbl-cmn01 span.imp {
+  display: block;
+  width: 70px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px 0;
+  background: #e70012;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  color: #fff;
+}
+.tbl-cmn01 td input {
+  font-size: 1rem;
+  min-height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 0;
+}
+.tbl-cmn01 .field-s {
+  width: 35%;
+}
+.tbl-cmn01 .field-m {
+  width: 50%;
+}
+.tbl-cmn01 .field-l {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 0;
+}
+@media screen and (max-width:767px) {
+  .contact-wrapper {
+    width: 80%;
+    margin: auto;
+  }
+  .tbl-cmn01 {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  .tbl-cmn01 th {
+    box-sizing: border-box;
+    padding: 0.3rem 1rem;
+    width: 100%;
+    display:block;
+    font-size: 0.8125rem;
+    background-color: #f0f0f0;
+  }
+  .tbl-cmn01 td {
+    padding: 0.6rem 1rem;
+    display: block;
+    font-size: 0.8125rem;
+  }
+}
+
+.contact-privacy {
+}
+.contact-privacy-box {
+  margin: 32px 0 35px;
+  padding: 15px;
+  height: 290px;
+  border: 1px solid #ccc;
+  overflow-y: scroll;
+}
+.contact-privacy p {
+  margin-bottom: 16px;
+}
+@media screen and (max-width:767px) {
+  .contact-privacy {
+    margin: 0 0 20px;
+  }
+  .contact-privacy p {
+    font-size: 0.8125rem;
+  }
+}
+
+.ttl-cmn03 {
+  position: relative;
+  margin: 32px 0 20px;
+  line-height: 1;
+}
+.ttl-cmn03 span {
+  padding-left: 30px;
+  font-weight: 700;
+}
+.ttl-cmn03 span:before {
+  display: block;
+  content: "●";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #e70012;
+}
+@media screen and (max-width:767px) {
+  .ttl-cmn03 {
+    margin: 0 0 10px;
+  }
+  .ttl-cmn03 span {
+    padding-left: 20px;
+    font-size: 0.875rem;
+  }
+  .ttl-cmn03 span:before {
+    top: 3px;
+  }
+}
+
+/*	お問い合わせ
+---------------------------------*/
+.setumei {
+  font-size: 1rem;
+  line-height: 2rem;
+  margin-bottom: 36px;
+}
+.contact-about {
+  padding: 40px 0 80px;
+}
+.contact-about p {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.contact-about .flex-btw {
+  margin: 0 auto;
+  max-width: 700px;
+  width: 100%;
+}
+.contact-about-tel {
+  border: 1px solid #ccc;
+  padding: 20px 20px;
+  width: 47%;
+  text-align: center;
+  position: relative;
+}
+.contact-about-tel:before {
+  display: block;
+  content: "";
+  background: #1a1a4a;
+  width: 5px;
+  height: 60px;
+  position: absolute;
+  top: 3px;
+  left: 5px;
+}
+.contact-about-tel:after {
+  display: block;
+  content: "";
+  background: #1a1a4a;
+  width: 5px;
+  height: 60px;
+  position: absolute;
+  top: 3px;
+  right: 5px;
+}
+.contact-about-tel h3 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding: 0 0 20px 0;
+  border-bottom: 1px dashed #ccc;
+}
+.contact-about-tel p.number {
+  margin-bottom: 0;
+  font-weight: 700;
+  line-height: 1;
+}
+.contact-about p.number span {
+  padding-left: 5px;
+  font-size: 1.875rem;
+}
+@media screen and (max-width: 1023px){
+}
+@media screen and (max-width: 767px){
+  .contact-about {
+    padding: 30px 0;
+    text-align: center;
+  }
+  .contact-about p {
+    margin-bottom: 1rem;
+    font-size: 0.8125rem;
+    line-height: 2;
+  }
+  .contact-about-tel {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+  }
+  .contact-about-tel h3 {
+    font-size: 0.8125rem;
+    margin-bottom: 0.5rem;
+    padding: 0 0 0.5rem 0;
+  }
+  .contact-about p.number span {
+    font-size: 1.5rem;
+  }
+  .contact-about-tel:before {
+    height: 30px;
+  }
+  .contact-about-tel:after {
+    height: 30px;
+  }
+}
+
+
+.contact-form {
+  padding: 80px 0;
+  background: #f3f3f3;
+}
+.contact-form .contents-inr {
+  padding: 66px 100px;
+  background: #fff;
+}
+.contact-form p {
+  margin-bottom: 2rem;
+}
+.contact-form .tbl-cmn01 {
+  margin: 0 auto 5rem;
+}
+.contact-form .tbl-cmn01 th {
+  width: 38%;
+  text-align: left;
+  vertical-align: top;
+}
+.contact-form .tbl-cmn01 input {
+  font-size: 0.875rem;
+  min-height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 0;
+}
+.contact-form .tbl-cmn01 .field-s {
+  width: 35%;
+}
+.contact-form .tbl-cmn01 .field-m {
+  width: 50%;
+}
+.contact-form .tbl-cmn01 .field-l {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 0;
+}
+
+.contact-form-btn {
+  text-align: center;
+}
+.contact-form-btn input {
+  display: inline-block;
+  position: relative;
+  width: 240px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 70px;
+  -webkit-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  -webkit-appearance: none;
+}
+.contact-form-btn input.send-btn {
+  background-color: #000;
+  color: #fff;
+}
+.contact-form-btn input.return-btn {
+  background-color: #ccc;
+  color: #333;
+}
+@media screen and (max-width:1079px) {
+  .contact-form .tbl-cmn01 th {
+  }
+}
+@media screen and (max-width: 1023px){
+  .contact-form .contents-inr {
+    padding: 66px 15px;
+  }
+  .contact-form .tbl-cmn01 th {
+    padding: 1.1rem 0.5rem;
+  }
+  .contact-form .tbl-cmn01 td {
+    padding: 1.1rem 0.5rem;
+  }
+}
+@media screen and (max-width:767px) {
+  .contact-form {
+    padding: 40px 0;
+    background: #f3f3f3;
+  }
+  .contact-form .contents-inr {
+    padding: 30px 25px;
+  }
+  .contact-form .tbl-cmn01 {
+    margin: 0 auto 2rem;
+  }
+  .contact-form .tbl-cmn01 th {
+    padding: 0.6rem 1rem;
+    width: 100%;
+    font-size: 0.8125rem;
+  }
+  .contact-form p {
+    font-size: 0.8125rem;
+    line-height: 2;
+    margin-bottom: 1rem;
+  }
+  .contact-form-btn input {
+    width: 220px;
+    font-size: 0.8125rem;
+    line-height: 50px;
+  }
+  .contact-form-btn input.return-btn {
+    margin-bottom: 1rem;
+  }
+  .contact-form .tbl-cmn01 .field-s {
+    width: 100%;
+  }
+  .contact-form .tbl-cmn01 .field-m {
+    width: 100%;
+  }
+}
+
+
+.contact-privacy {
+}
+.contact-privacy-box {
+  margin: 0 0 35px;
+  padding: 15px;
+  height: 290px;
+  border: 1px solid #ccc;
+  overflow-y: scroll;
+}
+@media screen and (max-width:767px) {
+  .contact-privacy {
+    margin: 0 0 20px;
+  }
+  .contact-privacy p {
+    font-size: 0.8125rem;
+  }
+}
+
+#inquiry {
+  span {
+    margin-left: 0;
+    display: block;
+    label {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

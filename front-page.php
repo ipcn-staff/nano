@@ -14,7 +14,7 @@ get_header();
     </div>
 </div>
 
-<div class="p-page-header l-inner">
+<div class="p-page-header l-inner u-pb--0">
     <h2 class="p-page-header__title">失敗させない不動産有効活用相談</h2>
     <p class="p-page-header__desc">
         「どれぐらいで売れるの？」「収益率を上げたい」「自己資金を抑えたい」<br>
@@ -55,7 +55,7 @@ get_header();
         </div>
     </div>
     <div class="c-button u-mt--5">
-        <a class="c-button__label">不動産相談の内容を詳しく見る</a>
+        <a class="c-button__label" href="<?php echoHomeUrl('consultation'); ?> ">不動産相談の内容を詳しく見る</a>
     </div>
 </article>
 
@@ -120,7 +120,7 @@ get_header();
 <article class="l-inner u-mt--25">
      <ul class="p-three-card">
          <li class="p-three-card__item">
-             <a class="p-three-card-content">
+             <a href="<?php echoHomeUrl('compan/#01'); ?>" class="p-three-card-content">
                  <div class="p-three-card-content__header">
                      <h3 class="p-three-card-content__header-title">不動産アドバイザー</h3>
                      <p class="p-three-card-content__header-sub">ADVISOR</p>
@@ -133,7 +133,7 @@ get_header();
              </a>
          </li>
          <li class="p-three-card__item">
-             <a class="p-three-card-content">
+             <a href="<?php echoHomeUrl('compan/#02'); ?>" class="p-three-card-content">
                  <div class="p-three-card-content__header">
                      <h3 class="p-three-card-content__header-title">豊富な実績と経験</h3>
                      <p class="p-three-card-content__header-sub">EXPERIENCE</p>
@@ -146,7 +146,7 @@ get_header();
              </a>
          </li>
          <li class="p-three-card__item">
-             <a class="p-three-card-content">
+             <a href="<?php echoHomeUrl('compan/#03'); ?>" class="p-three-card-content">
                  <div class="p-three-card-content__header">
                      <h3 class="p-three-card-content__header-title">会社概要</h3>
                      <p class="p-three-card-content__header-sub">PROFILE</p>
@@ -165,81 +165,7 @@ get_header();
     </p>
 </article>
 
-<article class="l-inner u-mt--25 u-mb--20">
-    <section>
-        <div class="p-article-header">
-            <h2 class="p-article-header__title">売買物件情報</h2>
-            <p class="p-article-header__sub-title">マンション・土地・戸建て・事業用</p>
-        </div>
-        <div class="p-property-list u-mt--20">
-        <?php
-        $array = apiGet('index/buyPickUp');
-        foreach ($array as $val) {
-            $img_path = "https://conetas-web.com/fujimoto5/web/images/mansion/t/".sprintf("%08d",$val->seq)."-01.jpg";
-            $path = getHomeUrl("/property-details/?kbn=sell&type=mansion&id=$val->id");
-            $layout = $val->layout_num.getRoomLayout($val->room_layout);
-            echo "<article class='p-property-list__item'>";
-            echo "<a class='p-hover-effect--type1' href='$path'>";
-            echo "<img class='p-property-list__img' src='$img_path' alt=''>";
-            echo "</a>";
-            echo "<div class='p-property-list__content'>";
-            echo "<h3 class='p-property-list__title'>$val->mansion_name</h3>";
-            echo "<p class='p-property-list__excerpt'>価格:$val->price 万円<br>";
-            echo "間取り:$layout<br>";
-            echo "交通:$val->railroad_name<br>";
-            echo "駅:$val->station_name";
-            echo "</p>";
-            echo "</div>";
-            echo "</article>";
-        }
-        ?>
-        </div>
 
-        <p class="c-button">
-            <a class="c-button__label">売買物件を全て見る</a>
-        </p>
-    </section>
-
-    <section class="u-mt--20">
-        <div class="p-article-header">
-            <h2 class="p-article-header__title">賃貸物件情報</h2>
-            <p class="p-article-header__sub-title">マンション・借家・駐車場・事業用</p>
-        </div>
-
-        <div class="p-property-list u-mt--20">
-            <?php
-            $array = apiGet('index/leasePickUp');
-            foreach ($array as $val) {
-                $img_path = "https://conetas-web.com/fujimoto5/web/images/$val->kbn/t/".sprintf("%08d",$val->seq)."-01.jpg";
-                echo "<article class='p-property-list__item'>";
-                echo "<a class='p-hover-effect--type1'>";
-                echo "<img class='p-property-list__img' src='$img_path' alt=''>";
-                echo "</a>";
-                echo "<div class='p-property-list__content'>";
-                echo "<p class='p-property-list__excerpt'>価格:$val->hire 円<br>";
-                if ($val->kbn === "housing") {
-                    $layout = $val->layout_num.getRoomLayout($val->room_layout);
-                    echo "間取り:$layout<br>";
-                    echo "交通:$val->railroad_name<br>";
-                    echo "駅:$val->station_name";
-                } elseif ($val->kbn === "business") {
-                    $tsubo = round($val->extent * 0.3025,2);
-                    echo "広さ(m2/坪):$val->extent"."㎡/$tsubo<br>";
-                    echo "交通:$val->railroad_name<br>";
-                    echo "駅:$val->station_name";
-                }
-                echo "</p>";
-                echo "</div>";
-                echo "</article>";
-            }
-            ?>
-        </div>
-
-        <p class="c-button">
-            <a class="c-button__label">賃貸物件情報を全て見る</a>
-        </p>
-    </section>
-</article>
 
 <?php
 get_footer()

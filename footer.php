@@ -5,19 +5,19 @@
           <ul class="p-banner-list l-inner">
               <li class="p-banner-list__item">
                   <a href="https://m-bldg.fujimoto5.co.jp/" class="p-banner-list__content">
-                      <span class="p-banner-list__label">東大阪Mビル</span>
+                      <span class="p-banner-list__label">東大阪Mビル<br>バナー</span>
                   </a>
                   <img class="p-banner-list__img" src="<?php echoImgPath('top/04.jpg'); ?>">
               </li>
               <li class="p-banner-list__item">
                   <a href="https://www.zaisandoc.jp/" class="p-banner-list__content">
-                      <span class="p-banner-list__label">財産ドック</span>
+                      <span class="p-banner-list__label">財産ドック<br>バナー</span>
                   </a>
                   <img class="p-banner-list__img" src="<?php echoImgPath('top/05.jpg'); ?>">
               </li>
               <li class="p-banner-list__item">
                   <a href="https://www.fujimoto555.com/" class="p-banner-list__content">
-                      <span class="p-banner-list__label">最新物件情報</span>
+                      <span class="p-banner-list__label">最新物件情報<br>バナー</span>
                   </a>
                   <img class="p-banner-list__img" src="<?php echoImgPath('top/06.jpg'); ?>">
               </li>

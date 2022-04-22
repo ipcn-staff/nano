@@ -2,7 +2,7 @@
 @use "../mixin";
 .l-footer-fixed-banner {
   background-color: config.$primary-color;
-  position: fixed;
+  position: relative;
   width: 100%;
   bottom: 0;
   left: 0;
@@ -20,7 +20,10 @@
       display: block;
       height: 100%;
       color: white;
-      background: rgba(0,67,83,.8) !important;
+      background-color: config.$secondary-color;
+      &:hover {
+        background: darken(config.$secondary-color, 5%);
+      }
       text-align: center;
       min-width: 270px;
       padding: 0 10px;
@@ -30,7 +33,7 @@
   }
 
   &__close-button {
-    background-color: config.$primary-color;
+    background: #3b4960 !important;
     border: 0;
     color: #fff;
     width: 60px;

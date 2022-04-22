@@ -34,6 +34,7 @@ get_header();
             <h1 class="p-headline">大阪・真田山の地で住まいのアドバイス歴約50年</h1>
             <div class="p-entry">
                 <article class="p-entry__body">
+                    <div class="u-dummy-anchor" id="01"></div>
                     <section class="p-entry__body-row">
                         <h2 class="p-entry__body-title">不動産アドバイザー紹介</h2>
                         <div class="l-grid">
@@ -62,6 +63,7 @@ get_header();
                             </div>
                         </dl>
                     </section>
+                    <div class="u-dummy-anchor" id="02"></div>
                     <section class="p-entry__body-row">
                         <h2 class="p-entry__body-title">総合医療施設運営管理</h2>
                         <p class="u-flex--justify-center u-py--30 u-px--30">※Mビル運営管理の実績案内文＋MBビルサイトへリンク</p>
@@ -70,6 +72,7 @@ get_header();
                             <img style="width: 50%;height: auto" src="<?php echoImgPath('company/02.jpg'); ?>">
                         </div>
                     </section>
+                    <div class="u-dummy-anchor" id="03"></div>
                     <section class="p-entry__body-row">
                         <h2 class="p-entry__body-title">会社概要</h2>
                         <p>弊社は玉造駅（ＪＲ環状線、地下鉄）を中心に森ノ宮、真田山、鶴橋から西は上本町、上町筋、谷町筋に至る上町台地周辺を営業エリアとしております。</p>
@@ -177,11 +180,10 @@ get_header();
                         </dl>
                         <div class="u-flex--justify-center u-mt--20">
                             <div class="u-width--full">
-                                <img style="width: 100%;height: auto" src="<?php echoImgPath('company/tempo.jpg'); ?>">
-                                <p>▲株式会社フジモト産業外観</p>
+                                <img style="width: 100%;height: auto" src="<?php echoImgPath('company/04.jpg'); ?>">
                             </div>
                             <div class="u-width--full">
-                                <img style="width: 100%;height: auto" src="<?php echoImgPath('company/map.gif'); ?>">
+                                <img style="width: 100%;height: auto" src="<?php echoImgPath('company/03.jpg'); ?>">
                             </div>
                         </div>
                     </section>

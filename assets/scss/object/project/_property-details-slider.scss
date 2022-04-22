@@ -1,7 +1,7 @@
 .p-property-details-slider {
   width: 600px;
   height: 400px;
-  margin:  50px 0;
+  margin:  50px auto;
   &__item {
     display: block;
     height: 100%;
@@ -9,6 +9,9 @@
   }
 
   &__img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
     width: auto;
     height: 400px;
     object-fit: contain;

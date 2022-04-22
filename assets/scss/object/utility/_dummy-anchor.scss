@@ -1,0 +1,8 @@
+@use "../../function";
+@use "../../config";
+.u-dummy-anchor {
+  display: block;
+  $height:function.get-header-height(lg);
+  padding-top: 110px;
+  margin-top: -110px;
+}

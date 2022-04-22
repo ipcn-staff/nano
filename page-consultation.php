@@ -84,6 +84,7 @@ get_header();
                     </section>
                     <section class="p-entry__body-row">
                         <h2 class="p-entry__body-title">ご相談・お問い合わせ</h2>
+                        <?php echo do_shortcode('[mwform_formkey key="47"]') ?>
                     </section>
                 </article>
             </div>

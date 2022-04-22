@@ -1,4 +1,5 @@
 @use "../../mixin";
+@use "../../config";
 .p-property-list {
   display: flex;
   flex-wrap: wrap;
@@ -36,7 +37,7 @@
   }
 
   &__content {
-    border-left: 4px solid #d80100;
+    border-left: 4px solid config.$secondary-color;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -56,6 +57,22 @@
     line-height: 2;
     margin-bottom: 17px;
     max-width: 100%;
+  }
+
+  &__button {
+    background-color: black;
+    border-radius: 15px;
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    min-width: 100px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 20px;
+    text-align: center;
+    &:hover {
+      background-color: config.$secondary-color;
+    }
   }
 
 }

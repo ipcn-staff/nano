@@ -1,0 +1,33 @@
+.setumei {
+  font-size: 1rem;
+  line-height: 2rem;
+  margin-bottom: 36px;
+}
+/* 電話バナー */
+.tel-bnr {
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.tel-bnr a {
+  box-sizing: border-box;
+  padding: 20px 20px;
+  border: 1px solid #404040;
+}
+
+.tel-bnr .tel {
+  font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .tel-bnr a {
+    padding: 30px 20px;
+    text-align: center;
+  }
+  .tel-bnr .tel {
+    margin-bottom: 1rem;
+    display: inline-block;
+    font-size: 1.2rem;
+  }
+}
