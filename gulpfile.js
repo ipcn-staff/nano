@@ -19,7 +19,7 @@ gulp.task('default', function () {
 
 function sync(done) {
   browserSync.init({
-    proxy: 'http://demo.lo/',  // Local by Flywheelのドメイン
+    proxy: 'http://fujimoto.lo/',  // Local by Flywheelのドメイン
     open: true,
     watchOptions: {
       debounceDelay: 1000,  //1秒間、タスクの再実行を抑制
