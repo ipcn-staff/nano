@@ -1,6 +1,15 @@
 <?php
 get_header();
 ?>
+<div class="float-button">
+    <div class="float-button__wrapper">
+        <div class="float-button__outer"></div>
+        <a class="float-button__inner" href="tel:06-6784-8871">
+            TELで<br>
+            お問い合わせ
+        </a>
+    </div>
+</div>
 <div class="p-header-slider">
     <div id="mv1" class="p-header-slider__item p-header-content">
         <div class="p-header-content__inner">
