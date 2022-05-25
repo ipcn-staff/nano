@@ -20,7 +20,6 @@
   &__title {
     color: #000000;
     font-size: 40px;
-    line-height: 1.5;
     @include mixin.mincho;
 
     @include mixin.mq() {
