@@ -149,7 +149,7 @@ get_header();
 <article class="l-inner u-mt--25">
      <ul class="p-three-card">
          <li class="p-three-card__item">
-             <a href="<?php echoHomeUrl('compan/#01'); ?>" class="p-three-card-content">
+             <a href="<?php echoHomeUrl('company/#01'); ?>" class="p-three-card-content">
                  <div class="p-three-card-content__header">
                      <h3 class="p-three-card-content__header-title">不動産アドバイザー</h3>
                      <p class="p-three-card-content__header-sub">ADVISOR</p>
@@ -162,7 +162,7 @@ get_header();
              </a>
          </li>
          <li class="p-three-card__item">
-             <a href="<?php echoHomeUrl('compan/#02'); ?>" class="p-three-card-content">
+             <a href="<?php echoHomeUrl('company/#02'); ?>" class="p-three-card-content">
                  <div class="p-three-card-content__header">
                      <h3 class="p-three-card-content__header-title">豊富な実績と経験</h3>
                      <p class="p-three-card-content__header-sub">EXPERIENCE</p>
@@ -175,7 +175,7 @@ get_header();
              </a>
          </li>
          <li class="p-three-card__item">
-             <a href="<?php echoHomeUrl('compan/#03'); ?>" class="p-three-card-content">
+             <a href="<?php echoHomeUrl('company/#03'); ?>" class="p-three-card-content">
                  <div class="p-three-card-content__header">
                      <h3 class="p-three-card-content__header-title">会社概要</h3>
                      <p class="p-three-card-content__header-sub">PROFILE</p>
