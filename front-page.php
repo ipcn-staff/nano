@@ -4,7 +4,7 @@ get_header();
 <div class="float-button">
     <div class="float-button__wrapper">
         <div class="float-button__outer"></div>
-        <a class="float-button__inner" href="tel:06-6784-8871">
+        <a class="float-button__inner" href="tel:06-6762-0005">
             TELで<br>
             お問い合わせ
         </a>
