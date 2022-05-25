@@ -2,15 +2,35 @@
 get_header();
 ?>
 <div class="p-header-slider">
-    <div class="p-header-slider__item p-header-content">
+    <div id="mv1" class="p-header-slider__item p-header-content">
         <div class="p-header-content__inner">
-            <div class="p-header-content__title is-active">
-                大阪市内物件を中心に不動産に関する<br>
+            <div class="p-header-content__title">
+                大阪府内物件を中心に不動産に関する<br>
                 あらゆるお悩みやニーズを迅速・的確に解決
             </div>
         </div>
         <div class="p-header-slider__overlay" style="background-color: rgba(0,0,0,0.2)"></div>
-        <video class="p-header-slider__item-img" src="<?php echoImgPath('top/top_main.mp4'); ?>" muted autoplay playsinline loop preload="auto"></video>
+        <video class="p-header-slider__item-img" src="<?php echoImgPath('top/mv1.mp4'); ?>" muted playsinline preload="auto"></video>
+    </div>
+    <div id="mv2" class="p-header-slider__item p-header-content">
+        <div class="p-header-content__inner">
+            <div class="p-header-content__title">
+                公認不動産コンサルティングマスターが<br>
+                資産の有効活用につながる最新情報をいち早くお届け
+            </div>
+        </div>
+        <div class="p-header-slider__overlay" style="background-color: rgba(0,0,0,0.2)"></div>
+        <video class="p-header-slider__item-img" src="<?php echoImgPath('top/mv2.mp4'); ?>" muted playsinline preload="auto"></video>
+    </div>
+    <div id="mv3" class="p-header-slider__item p-header-content">
+        <div class="p-header-content__inner">
+            <div class="p-header-content__title">
+                空き土地の活用法・初期費・収益などをご提案！<br>
+                あなたにぴったりの土地活用の実現へ
+            </div>
+        </div>
+        <div class="p-header-slider__overlay" style="background-color: rgba(0,0,0,0.2)"></div>
+        <video class="p-header-slider__item-img" src="<?php echoImgPath('top/mv3.mp4'); ?>" muted playsinline preload="auto"></video>
     </div>
 </div>
 
@@ -76,11 +96,11 @@ get_header();
         </div>
         <section id="tab1" class="p-tab__content">
             <ul class="p-info-list">
-                <li class="p-info-list__item"><a class="p-info-list__content"><time>2022.04.05</time><h3 class="p-info-list__label">敷金・礼金０円エリアでの新築共同住宅の建築</h3></a></li>
-                <li class="p-info-list__item"><a class="p-info-list__content"><time>2022.04.01</time><h3 class="p-info-list__label">マンション経営の生命線</h3></a></li>
-                <li class="p-info-list__item"><a class="p-info-list__content"><time>2022.03.29</time><h3 class="p-info-list__label">単身用マンションの問題点と将来性</h3></a></li>
-                <li class="p-info-list__item"><a class="p-info-list__content"><time>2022.03.29</time><h3 class="p-info-list__label">収益物件としての賃貸マンション・アパートの理想の広さと間取り</h3></a></li>
-                <li class="p-info-list__item"><a class="p-info-list__content"><time>2022.03.17</time><h3 class="p-info-list__label">デメリット(4) 多額の借入には要注意</h3></a></li>
+                <li class="p-info-list__item"><a href="<?php echoHomeUrl('blog/マンション・アパート経営の厳しい現実'); ?>" class="p-info-list__content"><time>2022.05.19</time><h3 class="p-info-list__label">マンション・アパート経営の厳しい現実</h3></a></li>
+                <li class="p-info-list__item"><a class="p-info-list__content"><time>2022.05.13</time><h3 class="p-info-list__label">貸家建て付け地について</h3></a></li>
+                <li class="p-info-list__item"><a class="p-info-list__content"><time>2022.04.26</time><h3 class="p-info-list__label">土地を賃貸戸建てとして有効利用した事例</h3></a></li>
+                <li class="p-info-list__item"><a class="p-info-list__content"><time>2022.04.22</time><h3 class="p-info-list__label">賃貸戸建ての活用実例</h3></a></li>
+                <li class="p-info-list__item"><a class="p-info-list__content"><time>2022.04.15</time><h3 class="p-info-list__label">一戸建の賃貸住宅（賃貸戸建）はおすすめ！</h3></a></li>
             </ul>
         </section>
         <section id="tab2" class="p-tab__content">
@@ -170,3 +190,4 @@ get_header();
 <?php
 get_footer()
 ?>
+<script src="<?php echoAssetsPath('js/top-slider.js'); ?>"></script>

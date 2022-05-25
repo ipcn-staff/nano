@@ -6,6 +6,7 @@
     <meta name="description" content="<?php seo_description(); ?>">
     <?php wp_head(); ?>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="<?php echoAssetsPath('css/slick.min.css'); ?>">
     <link rel="stylesheet" href="<?php echoAssetsPath('css/slick-theme.min.css'); ?>">
 </head>
@@ -31,12 +32,12 @@
     <nav id="js-header__nav" class="l-header__nav">
         <ul class="l-global-nav l-inner">
             <li class="l-global-nav__item"><a href="" class="l-global-nav__label">不動産ブログ</a></li>
-            <li class="l-global-nav__item"><a href="<?php echoHomeUrl('consultation'); ?>" class="l-global-nav__label">不動産活用相談</a></li>
-            <li class="l-global-nav__item"><a href="" class="l-global-nav__label">買う</a></li>
-            <li class="l-global-nav__item"><a href="" class="l-global-nav__label">借りる</a></li>
-            <li class="l-global-nav__item"><a href="" class="l-global-nav__label">売る</a></li>
-            <li class="l-global-nav__item"><a href="" class="l-global-nav__label">貸す</a></li>
-            <li class="l-global-nav__item"><a href="<?php echoHomeUrl('compan'); ?>" class="l-global-nav__label">会社案内</a></li>
+            <li class="l-global-nav__item"><a href="<?php echoHomeUrl('consultation'); ?>" class="l-global-nav__label">不動産なんでも相談</a></li>
+            <li class="l-global-nav__item"><a href="https://www.fujimoto555.com/purchase.html" class="l-global-nav__label" target="_blank" rel="noopener">買う</a></li>
+            <li class="l-global-nav__item"><a href="https://www.fujimoto555.com/rent.html" class="l-global-nav__label" target="_blank" rel="noopener">借りる</a></li>
+            <li class="l-global-nav__item"><a href="<?php echoHomeUrl('sell'); ?>" class="l-global-nav__label">売る</a></li>
+            <li class="l-global-nav__item"><a href="<?php echoHomeUrl('lease'); ?>" class="l-global-nav__label">貸す</a></li>
+            <li class="l-global-nav__item"><a href="<?php echoHomeUrl('company'); ?>" class="l-global-nav__label">会社案内</a></li>
         </ul>
         <button id="js-header__nav-close" class="l-header__nav-close is-active">閉じる</button>
     </nav>

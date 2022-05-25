@@ -28,6 +28,16 @@
     a {
       @extend .l-footer-nav__title;
     }
+
+    &--wide {
+      @extend .l-footer-nav__title;
+      a {
+        display: block;
+        color: config.$primary-color;
+        margin-bottom: 20px;
+      }
+    }
+
   }
 
 }

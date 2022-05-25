@@ -1,0 +1,20 @@
+.c-common-list {
+
+  &__item {
+    line-height: 1.5;
+
+    &:before {
+      content: '・';
+      margin-right: 8px;
+    }
+
+    &--large-dot {
+      @extend .c-common-list__item;
+      &:before {
+        content: '●';
+        margin-right: 8px;
+      }
+    }
+
+  }
+}

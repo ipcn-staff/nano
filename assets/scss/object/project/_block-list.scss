@@ -19,6 +19,11 @@
       padding: 30px 10px;
     }
 
+    &--gray {
+      @extend .p-block-list__item;
+      background: #e7e7e7;
+    }
+
   }
 
   &__label {

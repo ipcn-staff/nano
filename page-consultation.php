@@ -3,7 +3,7 @@ get_header();
 ?>
 <ol class="c-breadcrumb l-inner">
     <li class="c-breadcrumb__item--home"><a></a></li>
-    <li class="c-breadcrumb__item">不動産活用</li>
+    <li class="c-breadcrumb__item">不動産なんでも相談</li>
 </ol>
 <main class="l-contents">
     <div class="l-contents__inner l-inner">
@@ -14,7 +14,7 @@ get_header();
             </div>
             <ul class="p-list">
                 <li class="p-list__item">
-                    <a class="p-list__label p-list__label--is-current">不動産活用</a>
+                    <a class="p-list__label p-list__label--is-current">不動産なんでも相談</a>
                 </li>
                 <li class="p-list__item">
                     <a class="p-list__label">相続問題・相続対策</a>
@@ -27,14 +27,7 @@ get_header();
                 </li>
             </ul>
 
-            <ul class="p-banner-list--column">
-                <li class="p-banner-list__item">
-                    <a href="https://www.fujimoto555.com" class="p-banner-list__content">
-                        <span class="p-banner-list__label">東大阪Mビル</span>
-                    </a>
-                    <img class="p-banner-list__img" src="<?php echoImgPath('property-details/left01.jpg'); ?>">
-                </li>
-            </ul>
+            <?php get_template_part('template-parts/common-sidebar') ?>
         </div>
         <div class="l-contents__right">
             <h1 class="p-headline">物件・土地をお持ちのオーナー様向け相談</h1>

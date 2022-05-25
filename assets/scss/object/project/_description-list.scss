@@ -21,11 +21,17 @@
   &__term {
     padding: 16px;
     width: 20%;
+    line-height: 1.2;
     background: #fafafa;
     border-right: 1px solid #ddd;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &--justify-left {
+      @extend .p-description-list__term;
+      justify-content: left;
+    }
   }
 
   &__description-group {
@@ -44,6 +50,8 @@
 
   &__description {
     width: 100%;
+    line-height: 1.5;
+
     &:not(:last-child) {
       border-bottom: 1px solid #ddd;
     }
