@@ -31,7 +31,7 @@
     </div>
     <nav id="js-header__nav" class="l-header__nav">
         <ul class="l-global-nav l-inner">
-            <li class="l-global-nav__item"><a href="" class="l-global-nav__label">不動産ブログ</a></li>
+            <li class="l-global-nav__item"><a href="<?php echoHomeUrl('blog'); ?>" class="l-global-nav__label">不動産ブログ</a></li>
             <li class="l-global-nav__item"><a href="<?php echoHomeUrl('consultation'); ?>" class="l-global-nav__label">不動産なんでも相談</a></li>
             <li class="l-global-nav__item"><a href="https://www.fujimoto555.com/purchase.html" class="l-global-nav__label" target="_blank" rel="noopener">買う</a></li>
             <li class="l-global-nav__item"><a href="https://www.fujimoto555.com/rent.html" class="l-global-nav__label" target="_blank" rel="noopener">借りる</a></li>

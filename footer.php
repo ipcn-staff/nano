@@ -49,7 +49,7 @@
                 <h2 class="l-footer-nav__title">不動産なんでも相談</h2>
                 <ul class="l-footer-nav-list">
                     <li class="l-footer-nav-list__item">
-                        <a href="<?php echoHomeUrl(''); ?>" class="l-footer-nav-list__label">不動産有効活用　</a>
+                        <a href="<?php echoHomeUrl(''); ?>" class="l-footer-nav-list__label">不動産有効活用</a>
                     </li>
                     <li class="l-footer-nav-list__item">
                         <a href="<?php echoHomeUrl(''); ?>" class="l-footer-nav-list__label">相続問題・相続対策</a>
