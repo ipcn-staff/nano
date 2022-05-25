@@ -133,7 +133,7 @@ get_header();
         </section>
     </div>
     <p class="c-button u-mt--10">
-        <a class="c-button__label">記事の一覧</a>
+        <a href="<?php echoHomeUrl('blog'); ?>" class="c-button__label">記事の一覧</a>
     </p>
 </article>
 
