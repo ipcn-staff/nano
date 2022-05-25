@@ -12,7 +12,7 @@ the_post();
         <?php get_template_part('template-parts/post-sidebar' ); ?>
         <div class="l-contents__right">
             <h1 class="p-headline"><?php the_title(); ?></h1>
-            <time class="p-headline__date"><?php the_date(); ?></time>
+            <time class="p-headline__date"><?php the_time( 'Y.m.d' ); ?></time>
             <div class="p-entry">
                 <article class="p-entry__body">
                     <div class="p-entry__body-row">

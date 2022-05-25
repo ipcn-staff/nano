@@ -22,7 +22,7 @@ $the_query = new WP_Query( $args );
                             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                                 <li class="p-archive__item">
                                     <a class="p-archive__link" href="<?php the_permalink() ?>">
-                                        <time class="p-archive__time"><?php the_time( 'Y-m-d' ); ?></time>
+                                        <time class="p-archive__time"><?php the_time( 'Y.m.d' ); ?></time>
                                         <span class="p-archive__label"><?php the_title(); ?></span>
                                     </a>
                                 </li>
